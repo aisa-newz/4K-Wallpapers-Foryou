@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aesthetic Laptop Wallpapers | HD & 4K Desktop Wallpapers</title>
+
+  <meta name="description"
+        content="Discover beautiful aesthetic laptop wallpapers in HD and 4K. Browse minimalist, nature, gaming, dark and stylish desktop backgrounds.">
+
+  <meta name="keywords"
+        content="laptop wallpaper, aesthetic laptop wallpaper, 4k laptop wallpaper, HD desktop wallpaper, laptop backgrounds, desktop wallpapers">
+
+  <meta property="og:title" content="Aesthetic Laptop Wallpapers | HD & 4K">
+  <meta property="og:description" content="Discover beautiful HD and 4K laptop wallpapers.">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f8;
+      color: #171717;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e8e8e8;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #e60023;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #e60023;
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 20px 45px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .hero h1 span {
+      color: #e60023;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 20px auto 28px;
+      color: #666;
+      font-size: 17px;
+    }
+
+    .search {
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1px solid #ddd;
+      border-radius: 50px;
+      outline: none;
+      font-size: 15px;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,.04);
+    }
+
+    .categories {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px 35px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .category {
+      border: 1px solid #ddd;
+      background: white;
+      padding: 9px 17px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .2s;
+    }
+
+    .category:hover,
+    .category.active {
+      background: #171717;
+      color: #fff;
+      border-color: #171717;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px 70px;
+    }
+
+    .section-title {
+      margin: 20px 0 22px;
+    }
+
+    .section-title h2 {
+      font-size: 26px;
+      letter-spacing: -.5px;
+    }
+
+    .section-title p {
+      color: #777;
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+    .gallery {
+      columns: 4 240px;
+      column-gap: 18px;
+    }
+
+    .wallpaper {
+      break-inside: avoid;
+      margin-bottom: 18px;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e9e9e9;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .wallpaper:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.10);
+    }
+
+    .wallpaper-image {
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wallpaper-image img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      transition: transform .3s;
+    }
+
+    .wallpaper:hover img {
+      transform: scale(1.04);
+    }
+
+    .badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(0,0,0,.75);
+      color: white;
+      padding: 5px 9px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .wallpaper-info {
+      padding: 15px;
+    }
+
+    .wallpaper-info h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .wallpaper-info p {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 13px;
+    }
+
+    .download-btn {
+      display: block;
+      text-align: center;
+      background: #171717;
+      color: white;
+      padding: 11px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .download-btn:hover {
+      background: #e60023;
+    }
+
+    .seo-content {
+      background: white;
+      border: 1px solid #e9e9e9;
+      border-radius: 18px;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .seo-content h2 {
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .seo-content h3 {
+      margin: 24px 0 7px;
+      font-size: 18px;
+    }
+
+    .seo-content p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    .related {
+      margin-top: 45px;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 18px;
+    }
+
+    .related-card {
+      background: white;
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .related-card:hover {
+      border-color: #171717;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #171717;
+      color: #fff;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer p {
+      color: #aaa;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .gallery {
+        columns: 2 150px;
+        column-gap: 12px;
+      }
+
+      .wallpaper {
+        margin-bottom: 12px;
+      }
+
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .seo-content {
+        padding: 22px;
+      }
+    }
+  </style>
+<link rel="me" href="https://www.blogger.com/profile/16737217849288108359" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="/" class="logo">Wall<span>Space</span></a>
+
+    <div class="nav-links">
+      <a href="#trending">Trending</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+</header>
+
+
+<section class="hero">
+
+  <h1>
+    Beautiful <span>Laptop Wallpapers</span>
+    for Your Screen
+  </h1>
+
+  <p>
+    Explore HD and 4K aesthetic wallpapers for laptops, desktops and PCs.
+    Find your next favorite background.
+  </p>
+
+  <div class="search">
+    <input
+      type="search"
+      id="search"
+      placeholder="Search laptop wallpapers..."
+      aria-label="Search laptop wallpapers"
+    >
+  </div>
+
+</section>
+
+
+<div class="categories" id="categories">
+
+  <button class="category active" data-category="all">
+    All
+  </button>
+
+  <button class="category" data-category="aesthetic">
+    Aesthetic
+  </button>
+
+  <button class="category" data-category="nature">
+    Nature
+  </button>
+
+  <button class="category" data-category="gaming">
+    Gaming
+  </button>
+
+  <button class="category" data-category="minimalist">
+    Minimalist
+  </button>
+
+  <button class="category" data-category="dark">
+    Dark
+  </button>
+
+</div>
+
+
+<main>
+
+  <section id="trending">
+
+    <div class="section-title">
+      <h2>🔥 Trending Laptop Wallpapers</h2>
+      <p>Popular HD and 4K backgrounds for your laptop and desktop.</p>
+    </div>
+
+
+    <div class="gallery" id="gallery">
+
+
+      <!-- WALLPAPER 1 -->
+      <article class="wallpaper"
+               data-category="aesthetic"
+               data-title="aesthetic sunset laptop wallpaper">
+
+        <a
+          href="https://ey43.com/4/9120968"
+          class="wallpaper-image"
+          aria-label="Aesthetic sunset laptop wallpaper">
+
+          <span class="badge">4K</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85"
+            alt="Aesthetic sunset laptop wallpaper"
+            loading="lazy">
+        </a>
+
+        <div class="wallpaper-info">
+
+          <h3>Aesthetic Sunset</h3>
+
+          <p>4K • Aesthetic • Desktop</p>
+
+          <a
+            href="https://ey43.com/4/9120968"
+            class="download-btn">
+            View & Download
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- WALLPAPER 2 -->
+      <article class="wallpaper"
+               data-category="nature"
+               data-title="mountain nature laptop wallpaper">
+
+        <a
+          href="https://ey43.com/4/9120968"
+          class="wallpaper-image"
+          aria-label="Mountain nature laptop wallpaper">
+
+          <span class="badge">HD</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85"
+            alt="Mountain nature laptop wallpaper"
+            loading="lazy">
+        </a>
+
+        <div class="wallpaper-info">
+
+          <h3>Mountain Escape</h3>
+
+          <p>HD • Nature • Landscape</p>
+
+          <a
+            href="https://ey43.com/4/9120968"
+            class="download-btn">
+            View & Download
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- WALLPAPER 3 -->
+      <article class="wallpaper"
+               data-category="minimalist"
+               data-title="minimalist laptop wallpaper">
+
+        <a
+          href="https://ey43.com/4/9120968"
+          class="wallpaper-image"
+          aria-label="Minimalist laptop wallpaper">
+
+          <span class="badge">4K</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1200&q=85"
+            alt="Minimalist laptop wallpaper"
+            loading="lazy">
+        </a>
+
+        <div class="wallpaper-info">
+
+          <h3>Minimal Mountain</h3>
+
+          <p>4K • Minimalist • Desktop</p>
+
+          <a
+            href="https://ey43.com/4/9120968"
+            class="download-btn">
+            View & Download
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- WALLPAPER 4 -->
+      <article class="wallpaper"
+               data-category="dark"
+               data-title="dark aesthetic laptop wallpaper">
+
+        <a
+          href="https://ey43.com/4/9120968"
+          class="wallpaper-image"
+          aria-label="Dark aesthetic laptop wallpaper">
+
+          <span class="badge">4K</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1200&q=85"
+            alt="Dark aesthetic laptop wallpaper"
+            loading="lazy">
+        </a>
+
+        <div class="wallpaper-info">
+
+          <h3>Dark Aesthetic</h3>
+
+          <p>4K • Dark • Aesthetic</p>
+
+          <a
+            href="https://ey43.com/4/9120968"
+            class="download-btn">
+            View & Download
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- WALLPAPER 5 -->
+      <article class="wallpaper"
+               data-category="gaming"
+               data-title="gaming laptop wallpaper">
+
+        <a
+          href="https://ey43.com/4/9120968"
+          class="wallpaper-image"
+          aria-label="Gaming laptop wallpaper">
+
+          <span class="badge">4K</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=85"
+            alt="Gaming laptop wallpaper"
+            loading="lazy">
+        </a>
+
+        <div class="wallpaper-info">
+
+          <h3>Gaming Setup</h3>
+
+          <p>4K • Gaming • PC</p>
+
+          <a
+            href="https://ey43.com/4/9120968"
+            class="download-btn">
+            View & Download
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- WALLPAPER 6 -->
+      <article class="wallpaper"
+               data-category="nature"
+               data-title="forest laptop wallpaper">
+
+        <a
+          href="https://ey43.com/4/9120968"
+          class="wallpaper-image"
+          aria-label="Forest laptop wallpaper">
+
+          <span class="badge">HD</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85"
+            alt="Forest laptop wallpaper"
+            loading="lazy">
+        </a>
+
+        <div class="wallpaper-info">
+
+          <h3>Deep Forest</h3>
+
+          <p>HD • Nature • Forest</p>
+
+          <a
+            href="https://ey43.com/4/9120968"
+            class="download-btn">
+            View & Download
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <section class="seo-content" id="about">
+
+    <h2>Beautiful Laptop Wallpapers</h2>
+
+    <p>
+      Looking for a new laptop wallpaper? Explore our collection of
+      high-quality desktop backgrounds designed for laptops, PCs and
+      widescreen displays.
+    </p>
+
+    <h3>4K Laptop Wallpapers</h3>
+
+    <p>
+      Browse high-resolution 4K laptop wallpapers featuring nature,
+      landscapes, minimalist designs, gaming setups and aesthetic
+      backgrounds.
+    </p>
+
+    <h3>Aesthetic Laptop Wallpapers</h3>
+
+    <p>
+      Discover aesthetic laptop backgrounds that can give your desktop
+      a fresh look. Choose from dark, minimalist, nature and modern
+      designs.
+    </p>
+
+    <h3>How to Download a Wallpaper</h3>
+
+    <p>
+      Select any wallpaper you like and open its download page.
+      Choose the available resolution and save the wallpaper to your
+      device.
+    </p>
+
+  </section>
+
+
+  <section class="related">
+
+    <div class="section-title">
+      <h2>Explore More</h2>
+      <p>Find more wallpaper collections.</p>
+    </div>
+
+    <div class="related-grid">
+
+      <a href="/4k-laptop-wallpapers/" class="related-card">
+        4K Wallpapers
+      </a>
+
+      <a href="/aesthetic-wallpapers/" class="related-card">
+        Aesthetic
+      </a>
+
+      <a href="/gaming-wallpapers/" class="related-card">
+        Gaming
+      </a>
+
+      <a href="/minimalist-wallpapers/" class="related-card">
+        Minimalist
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <strong>WallSpace</strong>
+
+  <p>
+    HD & 4K wallpapers for laptops and desktops.
+  </p>
+
+</footer>
+
+
+<script>
+
+  const searchInput = document.getElementById("search");
+  const wallpapers = document.querySelectorAll(".wallpaper");
+  const categoryButtons = document.querySelectorAll(".category");
+
+  let selectedCategory = "all";
+
+
+  function filterWallpapers() {
+
+    const searchTerm =
+      searchInput.value.toLowerCase().trim();
+
+    wallpapers.forEach(function(card) {
+
+      const title =
+        card.dataset.title.toLowerCase();
+
+      const category =
+        card.dataset.category;
+
+      const matchesSearch =
+        title.includes(searchTerm);
+
+      const matchesCategory =
+        selectedCategory === "all" ||
+        category === selectedCategory;
+
+      card.style.display =
+        matchesSearch && matchesCategory
+        ? "inline-block"
+        : "none";
+
+    });
+
+  }
+
+
+  searchInput.addEventListener(
+    "input",
+    filterWallpapers
+  );
+
+
+  categoryButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+      categoryButtons.forEach(function(btn) {
+        btn.classList.remove("active");
+      });
+
+      this.classList.add("active");
+
+      selectedCategory =
+        this.dataset.category;
+
+      filterWallpapers();
+
+    });
+
+  });
+
+</script>
+
+</body>
+</html>
